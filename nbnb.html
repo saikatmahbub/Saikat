@@ -1,0 +1,763 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>তোমাকে জিততেই হবে সৈকত, ফেরার সব পথ বন্ধ হয়ে গেছে</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced Intense, Dynamic Theme with xAI Flair */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #000000, #2a0a1a, #150030, #0a142a);
+            background-size: 600% 600%;
+            animation: cosmicGradient 30s ease infinite;
+            color: #f9fafb;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .bengali-title {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            line-height: 1.2;
+        }
+
+        @keyframes cosmicGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-panel {
+            background: rgba(15, 15, 25, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .glass-input {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .glass-input:focus {
+            outline: none;
+            border-color: #f43f5e; /* Rose focus */
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 15px rgba(244, 63, 94, 0.4);
+        }
+
+        .glass-button {
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.8), rgba(168, 85, 247, 0.8));
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .glass-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(244, 63, 94, 0.6);
+            background: linear-gradient(135deg, rgba(244, 63, 94, 1), rgba(168, 85, 247, 1));
+        }
+
+        /* Modals with Enhanced Animations */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 100;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-content {
+            transform: scale(0.9) translateY(20px);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.3); border-radius: 12px; }
+        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 12px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(244, 63, 94, 0.7); }
+
+        /* Checkbox Styling */
+        .hour-checkbox {
+            appearance: none;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.1rem;
+        }
+        
+        .hour-checkbox:checked {
+            background: linear-gradient(135deg, #f43f5e, #a855f7);
+            border-color: #f43f5e;
+            color: white;
+            box-shadow: 0 0 20px rgba(244, 63, 94, 0.7);
+        }
+
+        .hour-checkbox::after { content: attr(data-hour); }
+
+        .media-preview { max-height: 100px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .history-media { max-width: 100%; max-height: 400px; border-radius: 16px; margin-top: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+        
+        /* Streak Flame Animation */
+        @keyframes flame {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .streak-flame { animation: flame 1.5s ease-in-out infinite; }
+    </style>
+</head>
+<body class="p-6 md:p-10 lg:p-12">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Header with Streak Counter -->
+        <header class="text-center mb-12 relative">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 bengali-title text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-purple-500 to-rose-500" style="text-shadow: 0 6px 25px rgba(244, 63, 94, 0.5);">
+                তোমাকে জিততেই হবে সৈকত, <br class="hidden md:block" /> ফেরার সব পথ বন্ধ হয়ে গেছে
+            </h1>
+            <p class="text-base md:text-xl opacity-80 font-light tracking-widest uppercase mb-4">No Retreat. Only Conquest.</p>
+            <div class="flex justify-center items-center gap-4 text-rose-400">
+                <i class="fa-solid fa-fire text-3xl streak-flame"></i>
+                <span class="text-2xl font-bold" id="streakCounter">Streak: 0 days</span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Column: Tasks & Timer (Span 7) -->
+            <div class="lg:col-span-7 space-y-8">
+                
+                <!-- Study Timer with Notifications -->
+                <section class="glass-panel p-8 flex flex-col items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-rose-900/10 pointer-events-none animate-pulse slow-pulse"></div>
+                    <h2 class="text-3xl font-semibold mb-6 w-full text-left relative z-10"><i class="fa-solid fa-stopwatch mr-3 text-rose-400"></i> Unyielding Focus Timer</h2>
+                    <div class="text-7xl md:text-8xl font-mono font-bold tracking-wider mb-8 relative z-10" id="timerDisplay" style="text-shadow: 0 0 25px rgba(244, 63, 94, 0.5);">
+                        00:00:00
+                    </div>
+                    <div class="flex gap-6 relative z-10">
+                        <button id="startTimerBtn" class="glass-button px-8 py-3 rounded-full font-bold shadow-xl"><i class="fa-solid fa-play mr-3"></i> Launch</button>
+                        <button id="pauseTimerBtn" class="bg-gray-900/60 hover:bg-gray-800/80 border border-gray-600/50 text-gray-200 px-8 py-3 rounded-full font-bold shadow-xl transition"><i class="fa-solid fa-pause mr-3"></i> Suspend</button>
+                        <button id="resetTimerBtn" class="bg-rose-900/40 hover:bg-rose-800/60 border border-rose-500/50 text-rose-200 px-8 py-3 rounded-full font-bold shadow-xl transition"><i class="fa-solid fa-rotate-left mr-3"></i> Reset</button>
+                    </div>
+                    <div class="mt-6 w-full relative z-10">
+                        <label class="flex items-center gap-3 text-sm opacity-80">
+                            <input type="checkbox" id="timerNotification" class="w-4 h-4 accent-rose-500">
+                            Notify on session end (every 25 min Pomodoro)
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Task Manager with Edit & Priorities -->
+                <section class="glass-panel p-8">
+                    <h2 class="text-3xl font-semibold mb-6"><i class="fa-solid fa-crosshairs mr-3 text-rose-400"></i> Strategic Objectives</h2>
+                    
+                    <form id="taskForm" class="flex flex-col md:flex-row gap-4 mb-8">
+                        <input type="text" id="taskName" placeholder="Objective Name..." class="glass-input flex-1 px-5 py-3 rounded-lg text-base" required>
+                        <input type="text" id="taskInfo" placeholder="Details/Intel..." class="glass-input flex-1 px-5 py-3 rounded-lg text-base">
+                        <select id="taskPriority" class="glass-input w-full md:w-auto px-5 py-3 rounded-lg text-base">
+                            <option value="low">Low Priority</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                        <button type="submit" class="glass-button px-8 py-3 rounded-lg font-bold whitespace-nowrap"><i class="fa-solid fa-plus mr-2"></i> Deploy</button>
+                    </form>
+
+                    <div id="taskList" class="space-y-4 max-h-[400px] overflow-y-auto pr-3">
+                        <!-- Tasks will be rendered here -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: 16 Hours & Thoughts (Span 5) -->
+            <div class="lg:col-span-5 space-y-8 flex flex-col">
+                
+                <!-- 16 Hour Tracker with Labels & Streak -->
+                <section class="glass-panel p-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-3xl font-semibold"><i class="fa-solid fa-fire-flame-curved mr-3 text-rose-500"></i> 16-Hour Conquest</h2>
+                        <button onclick="openCalendarModal()" class="text-base bg-white/10 hover:bg-white/20 px-4 py-2 rounded transition">
+                            <i class="fa-solid fa-calendar-days mr-2"></i> Legacy
+                        </button>
+                    </div>
+                    <p class="text-base opacity-70 mb-6">Dominate every hour. Build your streak.</p>
+                    
+                    <div class="grid grid-cols-4 sm:grid-cols-8 lg:grid-cols-4 gap-4 justify-items-center" id="hourTrackerGrid">
+                        <!-- Enhanced Checkboxes -->
+                    </div>
+                    <div class="w-full bg-gray-900 rounded-full h-3 mt-6 overflow-hidden">
+                        <div id="hourProgressBar" class="bg-gradient-to-r from-rose-600 to-purple-600 h-3 rounded-full transition-all duration-700" style="width: 0%"></div>
+                    </div>
+                </section>
+
+                <!-- Daily Thoughts with Edit/Delete & AI Suggestions -->
+                <section class="glass-panel p-8 flex-1 flex flex-col min-h-[400px]">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-3xl font-semibold"><i class="fa-solid fa-brain mr-3 text-purple-400"></i> Empire Reflections</h2>
+                        <button onclick="openThoughtsModal()" class="text-base bg-white/10 hover:bg-white/20 px-4 py-2 rounded transition">
+                            <i class="fa-solid fa-clock-rotate-left mr-2"></i> Vault
+                        </button>
+                    </div>
+                    
+                    <textarea id="thoughtsInput" class="glass-input flex-1 w-full p-5 rounded-lg resize-none mb-4 text-base" placeholder="Chronicle your triumphs, strategies, and evidence..."></textarea>
+                    
+                    <!-- Media Preview with Drag & Drop -->
+                    <div id="mediaPreviewContainer" class="flex flex-wrap gap-3 mb-4 hidden" ondrop="handleDrop(event)" ondragover="event.preventDefault()" style="border: 2px dashed rgba(255,255,255,0.2); border-radius: 12px; padding: 12px; min-height: 120px;"></div>
+
+                    <div class="flex gap-3">
+                        <label for="mediaInput" class="bg-gray-900 hover:bg-gray-800 border border-gray-700 cursor-pointer px-5 py-3 rounded-lg transition flex items-center justify-center text-base" title="Attach Media (Drag & Drop Supported)">
+                            <i class="fa-solid fa-paperclip mr-2"></i> Attach
+                        </label>
+                        <input type="file" id="mediaInput" accept="image/*,video/*,audio/*" multiple class="hidden">
+                        <button id="suggestThoughtBtn" class="bg-purple-900/60 hover:bg-purple-800/80 border border-purple-500/50 text-purple-200 px-5 py-3 rounded-lg font-bold transition"><i class="fa-solid fa-lightbulb mr-2"></i> AI Insight</button>
+                        <button id="saveThoughtsBtn" class="glass-button flex-1 py-3 rounded-lg font-bold">
+                            <i class="fa-solid fa-floppy-disk mr-2"></i> Secure
+                        </button>
+                    </div>
+                    <p id="saveIndicator" class="text-green-400 text-sm text-center mt-3 opacity-0 transition-opacity duration-500">Vault Updated.</p>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar History Modal with Streak Details -->
+    <div id="calendarModal" class="fixed inset-0 modal-overlay flex items-center justify-center p-6">
+        <div class="glass-panel modal-content w-full max-w-4xl max-h-[85vh] flex flex-col bg-gray-950/95 border-gray-800">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h3 class="text-3xl font-bold"><i class="fa-solid fa-calendar-check mr-3 text-rose-500"></i> Conquest Legacy</h3>
+                <button onclick="closeModals()" class="text-gray-400 hover:text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto flex-1">
+                <div id="calendarGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+                    <!-- Calendar Cards -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thoughts History Modal with Edit/Delete -->
+    <div id="thoughtsModal" class="fixed inset-0 modal-overlay flex items-center justify-center p-6">
+        <div class="glass-panel modal-content w-full max-w-5xl max-h-[90vh] flex flex-col bg-gray-950/95 border-gray-800">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h3 class="text-3xl font-bold"><i class="fa-solid fa-box-archive mr-3 text-purple-500"></i> Reflection Vault</h3>
+                <button onclick="closeModals()" class="text-gray-400 hover:text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto flex-1 bg-black/50 rounded-b-2xl space-y-8" id="thoughtsHistoryContainer">
+                <!-- Historic Thoughts -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- UTILITIES ---
+        const getTodayString = () => new Date().toISOString().split('T')[0];
+        const dbName = "SaikatEmpireDB_v2";
+        let db;
+        const motivationalQuotes = [
+            "The universe bends to those who persist.",
+            "Failure is not an option in your lexicon.",
+            "Build the future, one hour at a time.",
+            "xAI reminds: Curiosity fuels conquest.",
+            "No path back—only forward to victory."
+        ];
+
+        const initDB = new Promise((resolve, reject) => {
+            const request = indexedDB.open(dbName, 2);
+            
+            request.onupgradeneeded = (e) => {
+                const database = e.target.result;
+                if (!database.objectStoreNames.contains('hours')) {
+                    database.createObjectStore('hours', { keyPath: 'date' });
+                }
+                if (!database.objectStoreNames.contains('thoughts')) {
+                    database.createObjectStore('thoughts', { keyPath: 'id', autoIncrement: true });
+                }
+                if (!database.objectStoreNames.contains('streaks')) {
+                    database.createObjectStore('streaks', { keyPath: 'id' });
+                }
+            };
+
+            request.onsuccess = (e) => {
+                db = e.target.result;
+                resolve(db);
+            };
+
+            request.onerror = (e) => reject(e);
+        });
+
+
+        // --- 1. Timer Logic with Pomodoro & Notifications ---
+        let timerInterval;
+        let totalSeconds = parseInt(localStorage.getItem('saikat_timer_seconds_v2')) || 0;
+        let isRunning = false;
+        const timerDisplay = document.getElementById('timerDisplay');
+        const notificationCheckbox = document.getElementById('timerNotification');
+        
+        function updateTimerDisplay() {
+            const h = Math.floor(totalSeconds / 3600).toString().padStart(2, '0');
+            const m = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, '0');
+            const s = (totalSeconds % 60).toString().padStart(2, '0');
+            timerDisplay.textContent = `\( {h}: \){m}:${s}`;
+        }
+
+        function checkPomodoro() {
+            if (notificationCheckbox.checked && totalSeconds % 1500 === 0 && totalSeconds > 0) { // 25 min
+                new Notification("Pomodoro Session End", { body: "Take a short break or continue conquering." });
+            }
+        }
+
+        document.getElementById('startTimerBtn').addEventListener('click', () => {
+            if (!isRunning) {
+                isRunning = true;
+                if (notificationCheckbox.checked) Notification.requestPermission();
+                timerInterval = setInterval(() => {
+                    totalSeconds++;
+                    localStorage.setItem('saikat_timer_seconds_v2', totalSeconds);
+                    updateTimerDisplay();
+                    checkPomodoro();
+                }, 1000);
+            }
+        });
+
+        document.getElementById('pauseTimerBtn').addEventListener('click', () => {
+            isRunning = false;
+            clearInterval(timerInterval);
+        });
+
+        document.getElementById('resetTimerBtn').addEventListener('click', () => {
+            if (confirm("Reset the timer? All progress lost.")) {
+                isRunning = false;
+                clearInterval(timerInterval);
+                totalSeconds = 0;
+                localStorage.setItem('saikat_timer_seconds_v2', 0);
+                updateTimerDisplay();
+            }
+        });
+        updateTimerDisplay();
+
+
+        // --- 2. Tasks Logic with Priorities & Edit ---
+        const taskForm = document.getElementById('taskForm');
+        const taskList = document.getElementById('taskList');
+        let tasks = JSON.parse(localStorage.getItem('saikat_tasks_v3')) || [];
+
+        function saveTasks() { localStorage.setItem('saikat_tasks_v3', JSON.stringify(tasks)); }
+
+        function renderTasks() {
+            taskList.innerHTML = '';
+            if (tasks.length === 0) {
+                taskList.innerHTML = '<p class="text-center opacity-60 italic py-6">No objectives deployed. Set your targets.</p>';
+                return;
+            }
+
+            tasks.forEach((task, index) => {
+                const priorityColor = { low: 'border-green-500', medium: 'border-yellow-500', high: 'border-rose-500' }[task.priority];
+                const taskEl = document.createElement('div');
+                taskEl.className = `p-4 rounded-xl border ${priorityColor} flex items-start gap-4 transition-all ${task.done ? 'bg-rose-900/20 opacity-60' : 'bg-black/50 hover:bg-black/70'}`;
+                
+                taskEl.innerHTML = `
+                    <input type="checkbox" \( {task.done ? 'checked' : ''} onchange="toggleTask( \){index})" class="mt-1.5 w-6 h-6 rounded border-gray-600 text-rose-600 focus:ring-rose-500 bg-black/60 cursor-pointer accent-rose-600">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-xl \( {task.done ? 'line-through text-rose-300' : 'text-white'}"> \){task.name}</h4>
+                        \( {task.info ? `<p class="text-base opacity-70 mt-2"> \){task.info}</p>` : ''}
+                        <span class="text-sm uppercase tracking-wide \( {priorityColor.replace('border', 'text')}-400"> \){task.priority}</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="editTask(${index})" class="text-gray-500 hover:text-purple-400 transition px-3 py-1.5"><i class="fa-solid fa-edit"></i></button>
+                        <button onclick="deleteTask(${index})" class="text-gray-500 hover:text-rose-400 transition px-3 py-1.5"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                `;
+                taskList.appendChild(taskEl);
+            });
+        }
+
+        taskForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('taskName').value.trim();
+            const info = document.getElementById('taskInfo').value.trim();
+            const priority = document.getElementById('taskPriority').value;
+            if (!name) return;
+
+            tasks.push({ name, info, priority, done: false });
+            saveTasks();
+            renderTasks();
+            taskForm.reset();
+        });
+
+        window.toggleTask = (index) => {
+            tasks[index].done = !tasks[index].done;
+            saveTasks();
+            renderTasks();
+        };
+
+        window.deleteTask = (index) => {
+            if (confirm("Eliminate this objective?")) {
+                tasks.splice(index, 1);
+                saveTasks();
+                renderTasks();
+            }
+        };
+
+        window.editTask = (index) => {
+            const newName = prompt("Edit Objective Name:", tasks[index].name);
+            const newInfo = prompt("Edit Details/Intel:", tasks[index].info);
+            if (newName) tasks[index].name = newName.trim();
+            if (newInfo) tasks[index].info = newInfo.trim();
+            saveTasks();
+            renderTasks();
+        };
+        renderTasks();
+
+
+        // --- 3. 16 Hour Tracker with Streak Calculation ---
+        const hourGrid = document.getElementById('hourTrackerGrid');
+        const progressBar = document.getElementById('hourProgressBar');
+        const streakCounter = document.getElementById('streakCounter');
+        let todayHours = Array(16).fill(false);
+        const todayStr = getTodayString();
+
+        async function loadTodayHours() {
+            await initDB;
+            const transaction = db.transaction(['hours'], 'readonly');
+            const store = transaction.objectStore('hours');
+            const request = store.get(todayStr);
+
+            request.onsuccess = () => {
+                if (request.result) {
+                    todayHours = request.result.data;
+                } else {
+                    saveHoursToDB(todayStr, todayHours);
+                }
+                renderHoursUI();
+                calculateStreak();
+            };
+        }
+
+        function saveHoursToDB(dateStr, dataArray) {
+            const transaction = db.transaction(['hours'], 'readwrite');
+            const store = transaction.objectStore('hours');
+            store.put({ date: dateStr, data: dataArray });
+        }
+
+        function renderHoursUI() {
+            hourGrid.innerHTML = '';
+            let completed = 0;
+            for (let i = 0; i < 16; i++) {
+                const box = document.createElement('input');
+                box.type = 'checkbox';
+                box.className = 'hour-checkbox';
+                box.dataset.hour = i + 1;
+                box.checked = todayHours[i];
+                if (todayHours[i]) completed++;
+                
+                box.addEventListener('change', (e) => {
+                    todayHours[i] = e.target.checked;
+                    saveHoursToDB(todayStr, todayHours);
+                    renderHoursUI();
+                    calculateStreak();
+                });
+                
+                hourGrid.appendChild(box);
+            }
+            const percentage = (completed / 16) * 100;
+            progressBar.style.width = `${percentage}%`;
+        }
+
+        async function calculateStreak() {
+            await initDB;
+            const transaction = db.transaction(['hours'], 'readonly');
+            const store = transaction.objectStore('hours');
+            const request = store.getAll();
+
+            request.onsuccess = () => {
+                const records = request.result.sort((a, b) => new Date(b.date) - new Date(a.date));
+                let streak = 0;
+                let currentDate = new Date(todayStr);
+                
+                for (let record of records) {
+                    const recordDate = new Date(record.date);
+                    if (recordDate.toISOString().split('T')[0] === currentDate.toISOString().split('T')[0]) {
+                        if (record.data.filter(Boolean).length >= 16) streak++;
+                        else break;
+                    } else {
+                        currentDate.setDate(currentDate.getDate() - 1);
+                        if (recordDate.toISOString().split('T')[0] !== currentDate.toISOString().split('T')[0]) break;
+                    }
+                }
+                streakCounter.textContent = `Streak: ${streak} days`;
+            };
+        }
+
+        loadTodayHours();
+
+        // --- 4. Daily Thoughts with Multi-Media, Drag-Drop, AI Suggest ---
+        const mediaInput = document.getElementById('mediaInput');
+        const previewContainer = document.getElementById('mediaPreviewContainer');
+        const suggestBtn = document.getElementById('suggestThoughtBtn');
+        let selectedFiles = [];
+
+        function handleDrop(e) {
+            e.preventDefault();
+            const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/') || f.type.startsWith('video/') || f.type.startsWith('audio/'));
+            files.forEach(addMedia);
+            renderMediaPreview();
+        }
+
+        mediaInput.addEventListener('change', (e) => {
+            Array.from(e.target.files).forEach(addMedia);
+            renderMediaPreview();
+        });
+
+        function addMedia(file) {
+            selectedFiles.push({
+                file,
+                type: file.type.split('/')[0],
+                url: URL.createObjectURL(file)
+            });
+        }
+
+        function renderMediaPreview() {
+            previewContainer.innerHTML = '';
+            if (selectedFiles.length > 0) {
+                previewContainer.classList.remove('hidden');
+                selectedFiles.forEach((media, index) => {
+                    const wrap = document.createElement('div');
+                    wrap.className = 'relative inline-block';
+                    
+                    if (media.type === 'image') {
+                        wrap.innerHTML = `<img src="${media.url}" class="media-preview">`;
+                    } else if (media.type === 'video') {
+                        wrap.innerHTML = `<video src="${media.url}" class="media-preview" muted loop autoplay></video>
+                                          <div class="absolute inset-0 flex items-center justify-center pointer-events-none"><i class="fa-solid fa-video text-white/80 text-2xl drop-shadow-lg"></i></div>`;
+                    } else if (media.type === 'audio') {
+                        wrap.innerHTML = `<audio src="${media.url}" controls class="w-32"></audio>`;
+                    }
+                    
+                    const removeBtn = document.createElement('button');
+                    removeBtn.innerHTML = '<i class="fa-solid fa-circle-xmark text-xl"></i>';
+                    removeBtn.className = 'absolute -top-3 -right-3 text-rose-500 bg-black/80 rounded-full hover:text-rose-400 transition p-1';
+                    removeBtn.onclick = () => {
+                        URL.revokeObjectURL(media.url);
+                        selectedFiles.splice(index, 1);
+                        renderMediaPreview();
+                    };
+                    
+                    wrap.appendChild(removeBtn);
+                    previewContainer.appendChild(wrap);
+                });
+            } else {
+                previewContainer.classList.add('hidden');
+            }
+        }
+
+        suggestBtn.addEventListener('click', () => {
+            const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+            document.getElementById('thoughtsInput').value += `\n\nAI Insight: "${randomQuote}"`;
+        });
+
+        document.getElementById('saveThoughtsBtn').addEventListener('click', async () => {
+            const text = document.getElementById('thoughtsInput').value.trim();
+            if (!text && selectedFiles.length === 0) return;
+
+            const thoughtRecord = {
+                timestamp: Date.now(),
+                dateStr: getTodayString(),
+                text,
+                mediaBlobs: selectedFiles.map(m => m.file)
+            };
+
+            await initDB;
+            const transaction = db.transaction(['thoughts'], 'readwrite');
+            const store = transaction.objectStore('thoughts');
+            
+            store.add(thoughtRecord).onsuccess = () => {
+                document.getElementById('thoughtsInput').value = '';
+                selectedFiles.forEach(m => URL.revokeObjectURL(m.url));
+                selectedFiles = [];
+                renderMediaPreview();
+                mediaInput.value = '';
+
+                const indicator = document.getElementById('saveIndicator');
+                indicator.style.opacity = '1';
+                setTimeout(() => indicator.style.opacity = '0', 3000);
+            };
+        });
+
+
+        // --- MODAL & HISTORY LOGIC ---
+        function openCalendarModal() {
+            document.getElementById('calendarModal').classList.add('active');
+            renderCalendarHistory();
+        }
+
+        function openThoughtsModal() {
+            document.getElementById('thoughtsModal').classList.add('active');
+            renderThoughtsHistory();
+        }
+
+        window.closeModals = () => {
+            document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+        };
+
+        // Render Enhanced Calendar History
+        async function renderCalendarHistory() {
+            await initDB;
+            const grid = document.getElementById('calendarGrid');
+            grid.innerHTML = '<p class="text-gray-500 col-span-full text-center py-8">Decrypting legacy...</p>';
+            
+            const transaction = db.transaction(['hours'], 'readonly');
+            const store = transaction.objectStore('hours');
+            const request = store.getAll();
+
+            request.onsuccess = () => {
+                grid.innerHTML = '';
+                const records = request.result.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                if (records.length === 0) {
+                    grid.innerHTML = '<p class="text-gray-500 col-span-full text-center py-8">No legacy etched yet.</p>';
+                    return;
+                }
+
+                records.forEach(record => {
+                    const completed = record.data.filter(Boolean).length;
+                    let colorClass = 'bg-gray-900 border-gray-700';
+                    let textClass = 'text-gray-500';
+                    let icon = 'fa-question';
+                    
+                    if (completed >= 14) { colorClass = 'bg-green-900/50 border-green-600'; textClass = 'text-green-400'; icon = 'fa-crown'; }
+                    else if (completed >= 10) { colorClass = 'bg-yellow-900/50 border-yellow-600'; textClass = 'text-yellow-400'; icon = 'fa-star'; }
+                    else if (completed > 0) { colorClass = 'bg-rose-900/50 border-rose-600'; textClass = 'text-rose-400'; icon = 'fa-fire'; }
+
+                    grid.innerHTML += `
+                        <div class="p-5 rounded-2xl border ${colorClass} flex flex-col items-center justify-center text-center transition hover:scale-105 hover:shadow-2xl">
+                            <i class="fa-solid ${icon} text-4xl mb-3 ${textClass}"></i>
+                            <div class="text-sm opacity-80 mb-2">${record.date}</div>
+                            <div class="text-4xl font-bold \( {textClass}"> \){completed}<span class="text-base opacity-60">/16</span></div>
+                        </div>
+                    `;
+                });
+            };
+        }
+
+        // Render Thoughts History with Edit/Delete
+        async function renderThoughtsHistory() {
+            await initDB;
+            const container = document.getElementById('thoughtsHistoryContainer');
+            container.innerHTML = '<div class="text-center text-gray-500 py-12"><i class="fa-solid fa-spinner fa-spin text-4xl mb-4"></i><br>Unlocking vault...</div>';
+            
+            const transaction = db.transaction(['thoughts'], 'readonly');
+            const store = transaction.objectStore('thoughts');
+            const request = store.getAll();
+
+            request.onsuccess = () => {
+                container.innerHTML = '';
+                const records = request.result.sort((a, b) => b.timestamp - a.timestamp);
+
+                if (records.length === 0) {
+                    container.innerHTML = '<div class="text-center text-gray-500 py-12">Vault is barren. Forge your reflections.</div>';
+                    return;
+                }
+
+                records.forEach(record => {
+                    const dateObj = new Date(record.timestamp);
+                    const dateStr = dateObj.toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }) + ' at ' + dateObj.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                    
+                    const card = document.createElement('div');
+                    card.className = 'bg-black/60 border border-white/10 rounded-2xl p-6 shadow-2xl relative';
+                    card.dataset.id = record.id;
+                    
+                    let html = `
+                        <div class="text-base text-purple-400 mb-4 border-b border-white/10 pb-3 flex justify-between items-center">
+                            <span><i class="fa-regular fa-clock mr-3"></i>${dateStr}</span>
+                            <div class="flex gap-3">
+                                <button onclick="editThought(${record.id})" class="text-gray-400 hover:text-purple-400"><i class="fa-solid fa-edit"></i></button>
+                                <button onclick="deleteThought(${record.id})" class="text-gray-400 hover:text-rose-400"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                        \( {record.text ? `<p class="whitespace-pre-wrap text-gray-100 mb-5 leading-relaxed text-base"> \){record.text}</p>` : ''}
+                    `;
+                    
+                    if (record.mediaBlobs && record.mediaBlobs.length > 0) {
+                        html += `<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5 border-t border-white/5 pt-5">`;
+                        record.mediaBlobs.forEach(blob => {
+                            const blobUrl = URL.createObjectURL(blob);
+                            if (blob.type.startsWith('image/')) {
+                                html += `<img src="${blobUrl}" class="history-media">`;
+                            } else if (blob.type.startsWith('video/')) {
+                                html += `<video src="${blobUrl}" controls class="history-media"></video>`;
+                            } else if (blob.type.startsWith('audio/')) {
+                                html += `<audio src="${blobUrl}" controls class="w-full"></audio>`;
+                            }
+                        });
+                        html += `</div>`;
+                    }
+                    card.innerHTML = html;
+                    container.appendChild(card);
+                });
+            };
+        }
+
+        window.editThought = async (id) => {
+            await initDB;
+            const transaction = db.transaction(['thoughts'], 'readwrite');
+            const store = transaction.objectStore('thoughts');
+            const request = store.get(id);
+
+            request.onsuccess = () => {
+                const record = request.result;
+                const newText = prompt("Edit Reflection:", record.text);
+                if (newText !== null) {
+                    record.text = newText.trim();
+                    store.put(record);
+                    renderThoughtsHistory();
+                }
+            };
+        };
+
+        window.deleteThought = async (id) => {
+            if (confirm("Erase this reflection from the vault?")) {
+                await initDB;
+                const transaction = db.transaction(['thoughts'], 'readwrite');
+                const store = transaction.objectStore('thoughts');
+                store.delete(id);
+                renderThoughtsHistory();
+            }
+        };
+
+    </script>
+</body>
+</html>
